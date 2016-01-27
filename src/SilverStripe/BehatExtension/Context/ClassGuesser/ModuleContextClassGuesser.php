@@ -32,7 +32,7 @@ class ModuleContextClassGuesser implements ClassGuesserInterface
      */
     public function setNamespaceBase($namespaceBase)
     {
-        $this->namespaceBase = $namespaceBase;
+        $this->namespaceBase = str_replace('-', '', $namespaceBase);
         return $this;
     }
 
